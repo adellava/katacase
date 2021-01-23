@@ -1,0 +1,20 @@
+{
+  "name": "katacase",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adellava/katacase.git"
+  },
+  "keywords": [],
+  "author": "Antonio Dell'Ava <antonio.dellava@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adellava/katacase/issues"
+  },
+  "homepage": "https://github.com/adellava/katacase#readme"
+}
