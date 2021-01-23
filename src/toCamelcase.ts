@@ -8,7 +8,9 @@ export default function (word: string): string {
         const word = wordArray[i];
         let tempString = word.toLowerCase();
         if(i){
-            tempString = tempString.substr(0, 1).toUpperCase() + tempString.substr(1);
+            const firstLetter = tempString.substr(0, 1).toUpperCase();
+            const restOfTheWord = tempString.substr(1);
+            tempString = firstLetter + restOfTheWord;
         }
         result += tempString;
     }
