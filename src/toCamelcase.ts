@@ -10,7 +10,6 @@ export default function (word: string): string {
         if(i){
             tempString = tempString.substr(0, 1).toUpperCase() + tempString.substr(1);
         }
-
         result += tempString;
     }
 
