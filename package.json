@@ -33,12 +33,13 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged && npm run testOnce"
+      "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
     "**/*.js": [
-      "eslint --fix"
+      "eslint --fix",
+      "jest --bail --findRelatedTests"
     ]
   }
 }
