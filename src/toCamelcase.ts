@@ -1,7 +1,7 @@
 import getWordsFromString from "./getWordsFromString";
 
 export default function (word: string): string {
-
+    
     if(!word) return "";
 
     const wordArray:string[] = getWordsFromString(word);

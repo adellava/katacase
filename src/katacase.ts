@@ -3,8 +3,8 @@ interface keyable {
     [key: string]: any  
 }
 
-const deepObjectToCamelcase = (obj:any): keyable => {
 
+const deepObjectToCamelcase = (obj:any): keyable => {
     const objectToCamelcase = (anObj:any): keyable => {
         const keys = Object.keys(anObj);
         const result:keyable = {};
@@ -15,7 +15,6 @@ const deepObjectToCamelcase = (obj:any): keyable => {
         }
         return result;
     }
-
     return objectToCamelcase(obj);
 };
 
