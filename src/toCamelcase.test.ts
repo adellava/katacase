@@ -6,7 +6,18 @@ interface Case {
 }
 
 const cases:Case[] = [
-    {input: "il sol che move il sole", output: "ilSolCheMoveIlSole"}
+    {
+        input: "il sol che move il sole",
+        output: "ilSolCheMoveIlSole"
+    },
+    {
+        input: "Amor, ch'al cor gentile ratto s'apprende,!!5 --!~@#$%%^&*( (Inferno)",
+        output: "amorChAlCorGentileRattoSApprende5Inferno"
+    },
+    {
+        input: " ... un volgo disperso che nome non ha  ",
+        output: "unVolgoDispersoCheNomeNonHa"
+    },
 ];
 
 test('it should transform a string in camel case', () => {

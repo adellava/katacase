@@ -12,7 +12,7 @@ module.exports = {
         "plugin:@typescript-eslint/eslint-recommended"
     ],
     rules: { 
-        "max-len": ["error", { "code": 80 }],
+        "max-len": ["error", { "code": 160 }],
         "no-unused-vars": "error",
         "no-console": 2,
         "indent": ["error", 4],

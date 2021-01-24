@@ -1,6 +1,10 @@
+import getWordsFromString from "./getWordsFromString";
+
 export default function (word: string): string {
 
-    const wordArray:string[] = word.split(" ");
+    if(!word) return "";
+
+    const wordArray:string[] = getWordsFromString(word);
 
     let result = "";
 
