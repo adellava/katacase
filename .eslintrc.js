@@ -18,5 +18,9 @@ module.exports = {
         "indent": ["error", 4],
         "linebreak-style": ["error", "unix"],
         "quotes": ["error", "double"],
+
+        "@typescript-eslint/no-unused-vars": "off",
+        "@typescript-eslint/no-unused-vars-experimental": "error",
+        "no-unused-vars": "off"
     }
 };

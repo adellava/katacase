@@ -1,23 +1,35 @@
 import stringToCamelCase from "./toCamelcase";
+import stringToSnakeCase from "./toSnakecase";
 interface keyable {
     [key: string]: any  
 }
 
-const deepObjectToCamelcase = (obj:any): keyable => {
-    const objectToCamelcase = (anObj:any): keyable => {
-        const keys = Object.keys(anObj);
-        const result:keyable = {};
-        for(const key of keys){
-            const newKey:string = stringToCamelCase(key);
-            const value = anObj[key]
-            result[newKey] = typeof(value) === "object" ? objectToCamelcase(value) : value;
+interface strategySignature {
+    (word:string):string;
+}
+
+const deepObjectKeyTransformFactory = ( strategy:strategySignature) => {
+    return (obj:any): keyable => {
+        const objectToStrategy = (anObj:any): keyable => {
+            const keys = Object.keys(anObj);
+            const result:keyable = {};
+            for(const key of keys){
+                const newKey:string = strategy(key);
+                const value = anObj[key]
+                result[newKey] = typeof(value) === "object" ? objectToStrategy(value) : value;
+            }
+            return result;
         }
-        return result;
+        return objectToStrategy(obj);
     }
-    return objectToCamelcase(obj);
-};
+}
+
+const deepObjectToCamelcase = deepObjectKeyTransformFactory(stringToCamelCase);
+const deepObjectToSnakecase = deepObjectKeyTransformFactory(stringToSnakeCase);
 
 export default {
     stringToCamelCase,
-    deepObjectToCamelcase
+    stringToSnakeCase,
+    deepObjectToCamelcase,
+    deepObjectToSnakecase
 }
