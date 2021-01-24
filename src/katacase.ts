@@ -1,9 +1,7 @@
 import stringToCamelCase from "./toCamelcase";
-
 interface keyable {
     [key: string]: any  
 }
-
 
 const deepObjectToCamelcase = (obj:any): keyable => {
 
@@ -20,7 +18,6 @@ const deepObjectToCamelcase = (obj:any): keyable => {
 
     return objectToCamelcase(obj);
 };
-
 
 export default {
     stringToCamelCase,
