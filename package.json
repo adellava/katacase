@@ -37,7 +37,8 @@
   },
   "lint-staged": {
     "**/*.js": [
-      "eslint --fix"
+      "eslint --fix",
+      "test"
     ]
   }
 }
