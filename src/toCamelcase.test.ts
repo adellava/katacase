@@ -18,6 +18,10 @@ const cases:Case[] = [
         input: " ... un volgo disperso che nome non ha  ",
         output: "unVolgoDispersoCheNomeNonHa"
     },
+    {
+        input: "     ",
+        output: ""
+    },
 ];
 
 test('it should transform a string in camel case', () => {
