@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --watch",
+    "testOnce": "jest",
     "dev": "npx tsc -w",
     "lint": "eslint . --ext .ts"
   },
@@ -32,13 +33,12 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged && npm run testOnce"
     }
   },
   "lint-staged": {
     "**/*.js": [
-      "eslint --fix",
-      "test"
+      "eslint --fix"
     ]
   }
 }
