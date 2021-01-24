@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --watch",
-    "testOnce": "jest",
+    "test:staged": "jest",
     "dev": "npx tsc -w",
     "lint": "eslint . --ext .ts"
   },
@@ -39,7 +39,7 @@
   "lint-staged": {
     "**/*.js": [
       "eslint --fix",
-      "jest --bail --findRelatedTests"
+      "test:staged"
     ]
   }
 }
